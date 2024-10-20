@@ -23,5 +23,23 @@
   "background_color": "#000000",
   "display": "standalone",
   "start_url":"/tanishqchejara/",
-  "description":"Tanishq Chejara."
+  "description":"Tanishq Chejara.",
+  "shortcuts": [
+    {
+      "name": "About",
+      "short_name": "About",
+      "description": "View Tanishq's About page",
+      "url": "/tanishqchejara/about",
+      "icons": [{ "src": "./android-chrome-192x192.png", "sizes": "192x192" }]
+    }
+  ],
+  "share_target": {
+    "action": "/tanishqchejara/",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
 }
