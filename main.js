@@ -87,7 +87,7 @@ function init() {
     }
 
     // Add event listener for manual sharing
-    // document.getElementById('share-button').addEventListener('click', sharePWA);
+    document.getElementById('share-button').addEventListener('click', sharePWA);
 }
 
 // Run initialization when DOM is loaded
