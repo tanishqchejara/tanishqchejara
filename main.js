@@ -92,3 +92,9 @@ function init() {
 
 // Run initialization when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-5HEHLPWHTP');
