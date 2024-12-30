@@ -1,3 +1,4 @@
 User-agent: *
 Disallow:
 Sitemap: https://tanishqchejara.github.io/tanishqchejara/sitemap.xml
+Sitemap: https://tanishqchejara.github.io/tanishqchejara/sitemap_google.xml
