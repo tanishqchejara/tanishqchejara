@@ -98,3 +98,117 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'G-96QBHJYW09');
+
+
+
+
+
+
+
+
+
+
+
+// Time-based color intensity management
+function getTimeBasedIntensity() {
+    const hour = new Date().getHours();
+    
+    // Morning: 6-11, Afternoon: 12-17, Evening: 18-21, Night: 22-5
+    if (hour >= 6 && hour <= 11) {
+        return getComputedStyle(document.documentElement).getPropertyValue('--morning-intensity');
+    } else if (hour >= 12 && hour <= 17) {
+        return getComputedStyle(document.documentElement).getPropertyValue('--afternoon-intensity');
+    } else if (hour >= 18 && hour <= 21) {
+        return getComputedStyle(document.documentElement).getPropertyValue('--evening-intensity');
+    } else {
+        return getComputedStyle(document.documentElement).getPropertyValue('--night-intensity');
+    }
+}
+
+// Update color intensity based on time
+function updateColorIntensity() {
+    const intensity = getTimeBasedIntensity();
+    document.documentElement.style.setProperty('--color-intensity', intensity);
+}
+
+// Theme Management
+const themeToggle = document.getElementById('theme-toggle');
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Initialize theme with time-based adjustments
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (prefersDarkScheme.matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+    
+    updateColorIntensity();
+}
+
+// Smooth theme toggle with intensity consideration
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    // Add transition class
+    document.documentElement.classList.add('theme-transition');
+    
+    // Toggle theme
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Update intensity
+    updateColorIntensity();
+    
+    // Remove transition class after animation
+    setTimeout(() => {
+        document.documentElement.classList.remove('theme-transition');
+    }, 300);
+}
+
+// Share functionality
+const shareButton = document.getElementById('share-button');
+const sharedContent = document.getElementById('shared-content');
+
+async function sharePortfolio() {
+    const shareData = {
+        title: 'Tanishq Chejara | 10X Developer',
+        text: 'Check out Tanishq Chejara\'s innovative software development portfolio',
+        url: window.location.href
+    };
+
+    try {
+        if (navigator.share) {
+            await navigator.share(shareData);
+            sharedContent.textContent = 'Thanks for sharing!';
+        } else {
+            await navigator.clipboard.writeText(window.location.href);
+            sharedContent.textContent = 'Link copied to clipboard!';
+        }
+    } catch (err) {
+        console.error('Error sharing:', err);
+        sharedContent.textContent = 'Couldn\'t share. Please try copying the URL manually.';
+    }
+
+    setTimeout(() => {
+        sharedContent.textContent = '';
+    }, 3000);
+}
+
+// Event Listeners
+document.addEventListener('DOMContentLoaded', initializeTheme);
+themeToggle.addEventListener('click', toggleTheme);
+shareButton.addEventListener('click', sharePortfolio);
+prefersDarkScheme.addEventListener('change', initializeTheme);
+
+// Update colors periodically based on time
+setInterval(updateColorIntensity, 60000); // Check every minute
+
+// Listen for visibility changes to update theme when tab becomes visible
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+        updateColorIntensity();
+    }
+});
