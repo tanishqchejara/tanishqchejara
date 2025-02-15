@@ -1,0 +1,249 @@
+:root {
+  /* Base colors for light theme */
+  --color-bg-morning: #ffffff;
+  --color-bg-noon: #fafafa;
+  --color-bg-evening: #f8f8f8;
+  --color-bg-night: #f5f5f5;
+  
+  --color-text-morning: rgba(26, 26, 26, 0.95);
+  --color-text-noon: rgba(26, 26, 26, 1);
+  --color-text-evening: rgba(26, 26, 26, 0.9);
+  --color-text-night: rgba(26, 26, 26, 0.85);
+  
+  --color-text-muted-morning: rgba(102, 102, 102, 0.9);
+  --color-text-muted-noon: rgba(102, 102, 102, 1);
+  --color-text-muted-evening: rgba(102, 102, 102, 0.85);
+  --color-text-muted-night: rgba(102, 102, 102, 0.8);
+  
+  --color-border-morning: rgba(229, 229, 229, 0.95);
+  --color-border-noon: rgba(229, 229, 229, 1);
+  --color-border-evening: rgba(229, 229, 229, 0.9);
+  --color-border-night: rgba(229, 229, 229, 0.85);
+  
+  --shadow-morning: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-noon: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-evening: 0 1px 3px rgba(0, 0, 0, 0.07);
+  --shadow-night: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+  /* Base colors for dark theme */
+  --color-bg-morning: #1a1a1a;
+  --color-bg-noon: #1f1f1f;
+  --color-bg-evening: #181818;
+  --color-bg-night: #141414;
+  
+  --color-text-morning: rgba(255, 255, 255, 0.95);
+  --color-text-noon: rgba(255, 255, 255, 1);
+  --color-text-evening: rgba(255, 255, 255, 0.9);
+  --color-text-night: rgba(255, 255, 255, 0.85);
+  
+  --color-text-muted-morning: rgba(160, 160, 160, 0.9);
+  --color-text-muted-noon: rgba(160, 160, 160, 1);
+  --color-text-muted-evening: rgba(160, 160, 160, 0.85);
+  --color-text-muted-night: rgba(160, 160, 160, 0.8);
+  
+  --color-border-morning: rgba(51, 51, 51, 0.95);
+  --color-border-noon: rgba(51, 51, 51, 1);
+  --color-border-evening: rgba(51, 51, 51, 0.9);
+  --color-border-night: rgba(51, 51, 51, 0.85);
+  
+  --shadow-morning: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-noon: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-evening: 0 1px 3px rgba(0, 0, 0, 0.25);
+  --shadow-night: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color 0.5s ease;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color 0.5s ease;
+}
+
+.theme-toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  opacity: 0.7;
+  transition: opacity 0.2s, transform 0.3s, border-color 0.5s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.theme-toggle svg {
+  position: absolute;
+  transition: opacity 0.3s, transform 0.3s;
+  color: var(--color-text);
+}
+
+.sun-icon {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.moon-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[data-theme="dark"] .sun-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[data-theme="dark"] .moon-icon {
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-size: 2.7rem; /* Slightly larger main heading */
+  margin-bottom: 0.7rem;
+  font-weight: 500; /* Lighter font weight for elegance */
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--muted-color);
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 2rem;
+}
+
+.contact-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.contact-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 0.8rem;
+}
+
+.contact-list li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: inline-block; /* For consistent hover area */
+  padding: 0.4rem 0; /* Add some vertical padding for easier clicking */
+  transition: color 0.3s ease, opacity 0.2s;
+}
+
+.contact-list li a:hover {
+  color: var(--accent-color);
+  opacity: 0.8;
+}
+
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--muted-color);
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main {
+      padding: 1.5rem;
+  }
+
+  h1 {
+      font-size: 2.3rem;
+  }
+
+  .contact-details {
+      grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
+   
+  .theme-toggle {
+      margin-left: 0; /* Reset margin for mobile */
+  }
+
+ 
+}
+
+@media (max-width: 500px) {
+  .main {
+      padding: 1rem;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .contact-section h2 {
+      font-size: 1.6rem;
+  }
+  .contact-list li a {
+      font-size: 1rem;
+  }
+}

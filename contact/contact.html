@@ -9,10 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ffff55" />
     <meta name="msvalidate.01" content="033E03DDE9E0138407E7B8479C6BFE96" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src https://www.google-analytics.com;"
-    />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com; script-src 'self' https://www.googletagmanager.com; connect-src https://www.google-analytics.com https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.googleapis.com data: https://fonts.gstatic.com data:;" />
 
     <meta
       name="description"
@@ -93,146 +90,133 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-96QBHJYW09"
     ></script>
     <script src="contact.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h4>
-      <a href="../index.html" aria-details="goes back to homepage."
-        >back to home...</a
-      >
-    </h4>
-    <header>
-      
-      <h1>Contact Tanishq Chejara</h1>
-      <p>Feel free to reach out through any of the following channels:</p>
-    </header>
+  <body data-theme="light">
+    <header class="header">
+      <nav class="nav">
+          <a href="../index.html" class="logo">TC</a>
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          </button>
+      </nav>
+  </header>
 
-    <main>
-      <section aria-labelledby="professional-contact">
-        <h2 id="professional-contact">Professional Platforms</h2>
-        <ul>
-          <li>
-            <a
-              href="https://linkedin.com/in/tanishqchejara"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-            >
-              LinkedIn: Tanishq Chejara
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/tanishqchejara"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-            >
-              GitHub: tanishqchejara
-            </a>
-          </li>
-        </ul>
-      </section>
+    <main class="main">
+      <section class="hero">
+        <h1>Secured Access Point - 10X Developer & Security Architect</h1>
+        <p class="subtitle">Your dedicated entry to engage a high-caliber 10X developer with a security-first mindset. Initiate contact through a protected gateway to discuss your innovative projects.</p>
+    </section>
 
-      <section aria-labelledby="social-media">
-        <h2 id="social-media">Social Media</h2>
-        <ul>
-          <li>
-            <a
-              href="https://x.com/TanishqChejara"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="X (Twitter) Profile"
-            >
-              X (Twitter): @TanishqChejara
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/tanishqchejara"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram Profile"
-            >
-              Instagram: @tanishqchejara
-            </a>
-          </li>
-          
-        </ul>
-      </section>
+      <section class="contact-details">
 
-      <section aria-labelledby="communication">
-        <h2 id="communication">Direct Communication</h2>
-        <ul>
-          <li>
-            <a
-              href="mailto:tanishqbabu6@gmail.com"
-              aria-label="Send email to Tanishq Chejara"
-            >
-              Email: tanishqbabu6@gmail.com
-            </a>
-          </li>
-          <li>
-            <a href="tel:+91-8302057474" aria-label="Call Tanishq Chejara">
-              Phone: +91 8302057474
-            </a>
-          </li>
-        </ul>
-      </section>
+        <section aria-labelledby="professional-contact" class="contact-section">
+          <h2 id="professional-contact">Connect Professionally</h2>
+          <p>For professional inquiries, collaborations, and networking, please connect with me through these platforms:</p>
+          <ul class="contact-list">
+            <li>
+              <a
+                href="https://linkedin.com/in/tanishqchejara"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Profile - Opens in new tab"
+                >LinkedIn: Connect on LinkedIn</a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/tanishqchejara"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Profile - Opens in new tab"
+                >GitHub: Explore My Portfolio</a>
+            </li>
+          </ul>
+        </section>
 
-      <!-- <section aria-labelledby="professional-networks">
-        <h2 id="professional-networks">Additional Networks</h2>
-        <ul>
-          <li>
-            <a
-              href="https://www.hackerrank.com/tanishqchejara"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="HackerRank Profile"
-            >
-              HackerRank: tanishqchejara
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://dev.to/tanishqchejara"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Dev.to Profile"
-            >
-              Dev.to: tanishqchejara
-            </a>
-          </li>
-        </ul>
-      </section> -->
+        <section aria-labelledby="social-media" class="contact-section">
+          <h2 id="social-media">Follow on Social Media</h2>
+          <p>Stay updated with my broader activities and engage on social media:</p>
+          <ul class="contact-list">
+            <li>
+              <a
+                href="https://x.com/TanishqChejara"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter) Profile - Opens in new tab"
+                >X (Twitter): Follow @TanishqChejara</a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/tanishqchejara"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram Profile - Opens in new tab"
+                >Instagram: View My Instagram</a>
+            </li>
 
-      <section aria-labelledby="messaging-platforms">
-        <h2 id="messaging-platforms">Messaging Platforms</h2>
-        <ul>
-          <li>
-            <a
-              href="https://wa.me/+918302057474"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp Contact"
-            >
-              WhatsApp: +91 8302057474
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://t.me/tanishqchejara"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Telegram Profile"
-            >
-              Telegram: @tanishqchejara
-            </a>
-          </li>
-        </ul>
+          </ul>
+        </section>
+
+        <section aria-labelledby="communication" class="contact-section">
+          <h2 id="communication">Direct Communication Channels</h2>
+          <p>For direct communication, please use the following methods:</p>
+          <ul class="contact-list">
+            <li>
+              <a
+                href="mailto:tanishqbabu6@gmail.com"
+                aria-label="Send an email to Tanishq Chejara"
+                >Email: tanishqbabu6@gmail.com</a>
+            </li>
+            <li>
+              <a href="tel:+91-8302057474" aria-label="Call Tanishq Chejara">
+                Phone: +91 83020 57474</a>
+            </li>
+          </ul>
+        </section>
+
+
+        <section aria-labelledby="messaging-platforms" class="contact-section">
+          <h2 id="messaging-platforms">Instant Messaging</h2>
+          <p>For quick messages and informal communication, you can reach me on:</p>
+          <ul class="contact-list">
+            <li>
+              <a
+                href="https://wa.me/+918302057474"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contact via WhatsApp - Opens in new tab"
+                >WhatsApp: Message via WhatsApp</a>
+            </li>
+            <li>
+              <a
+                href="https://t.me/tanishqchejara"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contact via Telegram - Opens in new tab"
+                >Telegram: Connect on Telegram</a>
+            </li>
+          </ul>
+        </section>
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <p>
         © 2025 Tanishq Chejara. All contact information is subject to change.
       </p>

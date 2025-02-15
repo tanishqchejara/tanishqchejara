@@ -6,10 +6,8 @@
       name="google-site-verification"
       content="p5rz8jrETRg6l-uT3jwZmMfjH40pJ_tIagJ8jVu41e4"
     />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src https://www.google-analytics.com;"
-    />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com; script-src 'self' https://www.googletagmanager.com; connect-src https://www.google-analytics.com https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.googleapis.com data: https://fonts.gstatic.com data:;" />
+
     <meta name="msvalidate.01" content="033E03DDE9E0138407E7B8479C6BFE96" />
     <meta
       name="description"
@@ -56,7 +54,7 @@
 
     <meta name="author" content="Tanishq Chejara" />
     <meta name="generator" content="Website Made by Tanishq Chejara" />
-    <title>Tanishq Chejara | Software Published</title>
+    <title>Tanishq Chejara | Software Developer | Software Published</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -79,131 +77,145 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-96QBHJYW09"
     ></script>
     <script src="pubsf.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h4>
-      <a href="../index.html" aria-details="goes back to homepage."
-        >back to home...</a
-      >
-    </h4>
-    <section>
-      <ul>
-        <li>
-          <span
-            ><h1>
-              LinkOtter
-              <img
-                src="../images/linkotter_icon.png"
-                alt="LinkOtter Icon"
-                width="25"
-                height="25"
-              />
-              - The Ultimate File Transfer Software
-            </h1></span
-          >
-          <p>
-            LinkOtter is a powerful personal file transfer application that
-            allows you to seamlessly transfer files between your Windows
-            PC/Laptop and Android mobile devices. Leveraging the convenience of
-            a mobile hotspot connection, this software simplifies the file
-            sharing process, making it accessible and efficient for users.
-          </p>
-          <h3>How it Works</h3>
-          <ol>
-            <li>Connect your PC/Laptop to your mobile hotspot.</li>
-            <li>Open the LinkOtter application on your Windows device.</li>
-            <li>Select the folder containing the files you wish to share.</li>
-            <li>Start the server within the LinkOtter application.</li>
-            <li>Scan the QR Code displayed in the LinkOtter application using your mobile device.</li>
-            <li>Open the provided link on your mobile device's browser.</li>
-            <li>
-              Download files by clicking on them or upload new files using the
-              intuitive upload button.
-            </li>
-            <li>
-              Enjoy the seamless file preview capabilities within the web
-              interface.
-            </li>
-          </ol>
-          <h3>Features and Benefits</h3>
-          <ul>
-            <li>
-              Effortless file transfer between Windows and Android devices
-            </li>
-            <li>
-              Leverages mobile hotspot connectivity for a reliable connection
-            </li>
-            <li>Intuitive web-based interface for easy file management</li>
-            <li>Supports file previewing for common media types</li>
-            <li>Minimizes the hassle of traditional file sharing methods</li>
-           
-          </ul>
-          <h3>Download LinkOtter</h3>
-          <ul>
-            <li><a href="../softwares/LinkOtterX64_Setup_alpha_0.2.exe">Windows-X64-Alpha_0.2</a></li>
-            <li><a href="../softwares/LinkOtterX86_Setup_alpha_0.2.exe">Windows-X86-Alpha_0.2</a></li>
-            <li><a href="../softwares/LinkOtterARM64_Setup_alpha_0.2.exe">Windows-ARM64-Alpha_0.2</a></li>
-          </ul>
-          <p>LinkOtter is currently available for Windows devices. Stay tuned for updates on support for additional platforms.</p>
-          <p>If you have any questions or need assistance, please don't hesitate to reach out to Our contact page. We're here to help you make the most of your file transfer experience.</p>
-          <h3>Changelog</h3>
-          <h4 >Version Alpha_0.2 <span >December 30, 2024</span></h4>
+    <header class="header">
+      <nav class="nav">
+          <a href="../index.html" class="logo">TC</a>
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          </button>
+      </nav>
+  </header>
+
+    <main class="main">
+      <section class="hero">
+          <h1>Software Publications</h1>
+          <p class="subtitle">Innovative Solutions for Modern Challenges</p>
+      </section>
+
+      <section class="project-showcase">
+          <div class="project-header">
+              <h2>
+                  <img src="../images/linkotter_icon.png" alt="LinkOtter Icon" class="project-icon" width="25" height="25">
+                  LinkOtter
+              </h2>
+              <p class="project-tagline">The Ultimate File Transfer Solution</p>
+          </div>
+
+          <div class="project-description">
+              <p>LinkOtter is a powerful personal file transfer application that enables seamless file sharing between Windows PC/Laptop and Android mobile devices, utilizing mobile hotspot connectivity for efficient and accessible file transfer.</p>
+          </div>
+
+          <div class="feature-section">
+              <h3>Key Features</h3>
+              <div class="features-grid">
+                  <div class="feature-item">
+                      <h4>Seamless Transfer</h4>
+                      <p>Effortless file transfer between Windows and Android devices</p>
+                  </div>
+                  <div class="feature-item">
+                      <h4>Web Interface</h4>
+                      <p>Intuitive web-based interface for easy file management</p>
+                  </div>
+                  <div class="feature-item">
+                      <h4>File Preview</h4>
+                      <p>Built-in preview support for common media types</p>
+                  </div>
+                  <div class="feature-item">
+                      <h4>Smart Sorting</h4>
+                      <p>Flexible file sorting by name, size, and date</p>
+                  </div>
+              </div>
+          </div>
+
+          <div class="usage-guide">
+              <h3>How It Works</h3>
+              <ol class="steps">
+                  <li>Connect your PC/Laptop to your mobile hotspot</li>
+                  <li>Open LinkOtter on your Windows device</li>
+                  <li>Select your sharing folder</li>
+                  <li>Start the server</li>
+                  <li>Scan the QR Code with your mobile device</li>
+                  <li>Access files through your mobile browser</li>
+                  <li>Download or upload files as needed</li>
+                  <li>Preview files directly in the interface</li>
+              </ol>
+          </div>
+
+          <div class="download-section">
+              <h3>Download LinkOtter</h3>
+              <div class="download-options">
+                  <a href="../softwares/LinkOtterX64_Setup_alpha_0.2.exe" class="download-button">Windows x64</a>
+                  <a href="../softwares/LinkOtterX86_Setup_alpha_0.2.exe" class="download-button">Windows x86</a>
+                  <a href="../softwares/LinkOtterARM64_Setup_alpha_0.2.exe" class="download-button">Windows ARM64</a>
+              </div>
+              <p class="version-info">Current Version: Alpha 0.2 (December 30, 2024)</p>
+          </div>
+
+          <div class="changelog">
+              <h3>Latest Updates</h3>
+              <div class="version-block">
+                  <h4>Version Alpha 0.2 Changes:</h4>
+                  <ul class="change-list">
+                      <li>Comprehensive file upload system with progress tracking</li>
+                      <li>Secure file download functionality</li>
+                      <li>Integrated file preview system</li>
+                      <li>Enhanced directory navigation</li>
+                      <li>File type recognition with icons</li>
+                      <li>100MB file size limit (configurable)</li>
+                      <li>Duplicate file detection</li>
+                      <li>Context-aware file search</li>
+                      <li>Advanced file sorting options</li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="screenshots">
+              <h3>Interface Preview</h3>
+              <div class="screenshot-container">
+                  <figure>
+                      <img src="../images/LinkOtter_home.jpg" alt="LinkOtter Home Screen" class="screenshot">
+                      <figcaption>LinkOtter Home Interface</figcaption>
+                  </figure>
+                  <figure>
+                      <img src="../images/LinkOtter_Web_Interface.jpg" alt="LinkOtter Web Interface" class="screenshot">
+                      <figcaption>LinkOtter Web Interface</figcaption>
+                  </figure>
+              </div>
+          </div>
+
+          <div class="support-section">
+              <h3>Support & Contact</h3>
+              <p>Need assistance or want to contribute? Reach out through our support channels:</p>
+              <div class="support-links">
+                  <a href="../contact/contact.html" class="support-button">Contact Support</a>
+                  <a href="https://buymeacoffee.com/tanishqbabu" class="support-button secondary">Support Development</a>
+              </div>
+          </div>
+      </section>
+  </main>
+
+  <footer class="footer">
+      <p>&copy; 2025 Tanishq Chejara. All rights reserved.</p>
+  </footer>
     
-    <h3>Web Interface Redesign</h3>
-    <ul>
-        <li>Implemented comprehensive file upload system with progress tracking and validation</li>
-        
-        <li>Added secure file download functionality with direct file access</li>
-        
-        <li>Integrated file preview system for supported file types through click-to-view functionality</li>
-        
-        <li>Enhanced directory navigation with intuitive browsing interface</li>
-        
-        <li> Added file type recognition with corresponding icons for improved visual feedback</li>
-        
-        <li>Implemented 100MB file size limit (configurable in Application) for uploads to ensure system stability</li>
-        
-        <li> Added duplicate file detection to prevent overwriting existing files</li>
-        
-        <li>Implemented context-aware file search functionality</li>
-        
-        <li> Added flexible file sorting options:
-            <ul>
-                <li>Name (alphabetical ordering)</li>
-                <li>Size (ascending/descending)</li>
-                <li>Date (newest/oldest)</li>
-            </ul>
-        </li>
-    </ul>
-          <h3>
-            LinkOtter Images
-          </h3>
-          <ul><li><img src="../images/LinkOtter_home.jpg" alt="LinkOtter Home Screen Image, created by Tanishq Chejara." width="650" height="400"></li></ul>
-          <br>
-          <br>
-          <br>
-          <ul><li><img src="../images/LinkOtter_Web_Interface.jpg" alt="LinkOtter Web Interface Image, created by Tanishq Chejara." width="650" height="400"></li></ul>
-          <h3>Stay Tuned for Updates</h3>
-          <p>
-            This is just the beginning of the LinkOtter journey. As we continue
-            to develop and enhance the software, you can expect even more
-            features and improvements that will solidify its position as the
-            ultimate file transfer solution. Keep an eye out for our latest
-            updates, and feel free to reach out if you'd like to collaborate or
-            support our efforts.
-          </p>
-          <p>
-            Contact us at our <a href="../contact/contact.html">Contact Page</a> or consider
-            <a href="https://buymeacoffee.com/tanishqbabu" target="_blank" rel="noopener noreferrer">buying us a cup of coffee</a> to show your support.
-          </p>
-
-
-          
-        </li>
-      </ul>
-    </section>
-    <footer>
-      Copyright © 2025 Tanishq Chejara. &nbsp;All rights reserved.
-    </footer>
-  </body>
+</body>
 </html>
